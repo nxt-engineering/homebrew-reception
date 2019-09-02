@@ -1,10 +1,10 @@
 class Reception < Formula
   desc "Entry page & reverse proxy for all your docker-compose projects."
-  homepage "https://github.com/ninech/reception"
-  url "https://github.com/ninech/reception/archive/2.0.0.tar.gz"
-  sha256 "efc080ca5245a6a9718936c22c7502a889c2d3dd71880315fe4bea95b4da4cb5"
-  head "https://github.com/ninech/reception.git"
-  revision 3
+  homepage "https://github.com/nxt-engineering/reception"
+  url "https://github.com/nxt-engineering/reception/archive/2.1.0.tar.gz"
+  sha256 "444dc4bee3967befa181eadd0574095dedb3de86cf85fbcad56df6d1a7cbe884"
+  head "https://github.com/nxt-engineering/reception.git"
+  revision 0
 
   depends_on "go" => :build
   depends_on "git" => :build
@@ -13,14 +13,13 @@ class Reception < Formula
 
   bottle do
     cellar :any
-    root_url "https://github.com/ninech/homebrew-reception/releases/download/v2.0.0_3"
-    sha256 "70964ae0e9f1c416ddde43adbb50e955b0f6d38c2f86b7310912ebca01d89f3d" => :sierra
+    root_url "https://github.com/nxt-engineering/homebrew-reception/releases/download/v2.0.0_3"
     sha256 "c899d65c03ec0c228dc4af52c35cd816cb3e1ad4771919b6f32128def3541b66" => :high_sierra
   end
 
   def install
-    mkdir_p buildpath/"src/github.com/ninech"
-    ln_sf buildpath, buildpath/"src/github.com/ninech/reception"
+    mkdir_p buildpath/"src/github.com/nxt-engineering"
+    ln_sf buildpath, buildpath/"src/github.com/nxt-engineering/reception"
 
     ENV["GOBIN"] = buildpath
     ENV["GOPATH"] = buildpath
@@ -33,7 +32,7 @@ class Reception < Formula
 
   def caveats
     <<~EOS
-      Read https://github.com/ninech/reception#macos to learn how to complete the setup!
+      Read https://github.com/nxt-engineering/reception#macos to learn how to complete the setup!
 
       It's important to launch reception as root. So if you use "brew services", use force:
 
