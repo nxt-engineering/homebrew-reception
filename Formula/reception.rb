@@ -13,8 +13,8 @@ class Reception < Formula
 
   bottle do
     cellar :any
-    root_url "https://github.com/nxt-engineering/homebrew-reception/releases/download/v2.0.0_3"
-    sha256 "c899d65c03ec0c228dc4af52c35cd816cb3e1ad4771919b6f32128def3541b66" => :high_sierra
+    root_url "https://github.com/nxt-engineering/homebrew-reception/releases/download/v2.1.0_0"
+    sha256 "28b73ddf0187d25e5d57c844f877be16f0fd626efad6f52d6c272b1c90db8a25" => :mojave
   end
 
   def install

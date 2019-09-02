@@ -1,14 +1,19 @@
-[Homebrew](https://brew.sh) tap for [reception](https://github.com/ninech/reception).
+# [Homebrew 🍺](https://brew.sh) tap for [reception](https://github.com/nxt-engineering/reception).
 
 ## Usage
 
-    brew tap ninech/homebrew-reception
-    brew install reception
+```bash
+brew tap nxt-engineering/homebrew-reception
+brew install reception
+```
 
 ## How to bottle
 
-    brew install --build-bottle reception
-    brew bottle reception
+```
+brew uninstall reception
+brew install --build-bottle reception
+brew bottle reception
+```
 
 1. Copy the output to `Formula/reception.rb`.
 2. Commit & Push the change.
@@ -18,6 +23,4 @@
 
 ## About
 
-This tap is currently maintained and funded by [nine](https://nine.ch).
-
-[![logo of the company 'nine'](https://logo.apps.at-nine.ch/Dmqied_eSaoBMQwk3vVgn4UIgDo=/trim/500x0/logo_claim.png)](https://www.nine.ch)
+This tap is currently maintained and funded by [nxt](https://nxt.engineering/en/).
