@@ -21,10 +21,10 @@ class Reception < Formula
     mkdir_p buildpath/"src/github.com/nxt-engineering"
     ln_sf buildpath, buildpath/"src/github.com/nxt-engineering/reception"
 
-    ENV["GOBIN"] = buildpath
-    ENV["GOPATH"] = buildpath
-    ENV["PATH"] = "#{buildpath}:#{ENV["PATH"]}"
+    ENV["GOPATH"] = "#{buildpath}/.gopath"
+    ENV["PATH"] = "#{buildpath}/.gopath/bin:#{ENV["PATH"]}"
 
+    system "go", "get", "github.com/GeertJohan/go.rice/rice@v1.0.0"
     system "make", "build"
 
     bin.install "reception"
