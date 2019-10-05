@@ -12,7 +12,7 @@ class Reception < Formula
   depends_on "docker-compose" => :optional
 
   bottle do
-    cellar :any_skip_relocation
+    cellar :any
     root_url "https://github.com/nxt-engineering/homebrew-reception/releases/download/v2.1.0_1"
     sha256 "28b73ddf0187d25e5d57c844f877be16f0fd626efad6f52d6c272b1c90db8a25" => :mojave
     sha256 "604dbb8596c93fc9d002f5f9e8f476287a71b5f23e87a8716f2638edefa39441" => :high_sierra
